@@ -34,14 +34,11 @@ if(!autho()){
         < nav className = "navbar navbar-inverse navbar-fixed-top" >
             <div className="container-flued navbarr">
                 <div className="navbar-header">
-                    <Link className="navbar-brand" to={"/"}>A.A.KALAINILAVAN</Link>
+                    <Link className="navbar-brand" to={"/"}>COM 64</Link>
                 </div>
           
                 
-                    <ul className="navbar-nav nav">
-                        <li><Link to={"/"}><i className="glyphicon glyphicon-home"></i> Home</Link></li>
-                      
-                    </ul>
+                   
                     <ul className="navbar-nav nav navbar-right">
                               { !autho()? (<li><Link to={"/login"}><i className="glyphicon glyphicon-user"></i> Sign_in</Link></li>):null}
                               {autho()?(    <li><a class="nav-link"  onClick={logoutuser} style={{cursor:"pointer"}} ><i className="glyphicon glyphicon-log-out"></i> Logout</a></li>):null}
@@ -60,20 +57,14 @@ if(!autho()){
                 <h3 >Dashboard page</h3>
                 {user.name!="" && user.email!="" && user.localID!=""?
                 (<div>
-                <p className="text-bold " >Hi!! {user.name}<br /> your ID is:  {user.localID}</p>
+                <p className="text-bold "></p> Hi!! WELCOME <p>{user.name}</p><br /> 
                 <p>your Email is  : {user.email}</p>
                 </div>): <p>loading...</p>}
             </div>
     
 </main >
-         {/*footer -----------------------------------------------start */}
-         <footer >
-                    <div className="fline">
-
-                        <div className="col-md-12 fline text-center"><Link className="aa" to={"/"}><h4>A.A.KALAINILAVAN</h4></Link><br /><p>EUSL/TC/IS/2020/COM/32</p></div>
-                    </div>
-                </footer>
-</div>
+   
+          </div>
 
 )
 
